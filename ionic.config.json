@@ -1,0 +1,7 @@
+{
+  "name": "react-hf-wizard",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
