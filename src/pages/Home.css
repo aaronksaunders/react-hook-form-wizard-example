@@ -1,0 +1,14 @@
+.slide-main {
+  width: 350px;
+  height: 420px;
+  background: rgb(233, 229, 229);
+  border: 1px solid white;
+}
+
+.form-content {
+    height : 84%
+}
+
+.form-footer {
+    float: right !important;
+}
