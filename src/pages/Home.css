@@ -12,3 +12,14 @@
 .form-footer {
     float: right !important;
 }
+
+.a-slide {
+  height: 100%;
+  background-color: grey;
+  font-size: 30px;
+  padding: 16px;
+}
+
+.noSwipingClass {
+  margin: auto;
+}

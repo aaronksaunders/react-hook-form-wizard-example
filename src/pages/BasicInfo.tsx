@@ -4,7 +4,10 @@ import { ErrorMessage } from "@hookform/error-message";
 import React from "react";
 
 export const BasicInfo: React.FC<any> = ({ next }) => {
-  const { register, errors } = useFormContext(); // retrieve all hook methods
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext(); // retrieve all hook methods
 
   return (
     <div className="slide-main ion-padding">
@@ -13,10 +16,9 @@ export const BasicInfo: React.FC<any> = ({ next }) => {
         <IonItem lines="none">
           <IonInput
             autocomplete="new-password"
-            name="first"
             placeholder="First Name"
             type="text"
-            ref={register({ required: "First Name Is Required" })}
+            {...register("first", { required: "First Name Is Required" })}
           ></IonInput>
         </IonItem>
         <ErrorMessage errors={errors} name="first" />
@@ -24,10 +26,9 @@ export const BasicInfo: React.FC<any> = ({ next }) => {
         <IonItem lines="none" style={{ marginTop: 8 }}>
           <IonInput
             autocomplete="new-password"
-            name="last"
             placeholder="Last Name"
             type="text"
-            ref={register({ required: "Last Name Is Required" })}
+            {...register("last", { required: "Last Name Is Required" })}
           ></IonInput>
         </IonItem>
         <ErrorMessage errors={errors} name="last" />
